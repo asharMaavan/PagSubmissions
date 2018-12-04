@@ -1,0 +1,59 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional (integration) tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
+
+class_name: FunctionalTester
+modules:
+    enabled:
+        - WebDriver
+        - Helper\Functional
+        - Asserts
+    config:
+        WebDriver:            
+            url: https://www.letsrockenroll.com/site/login
+            host: localhost
+            port: 9515
+            browser: chrome
+            window_size: maximize
+            capabilities:
+                unexpectedAlertBehaviour: 'accept'
+env:
+
+    mySkinStudy:
+            modules:
+                config:
+                    WebDriver:
+                        url: 'https://www.myskinstudy.com/#center'
+                        browser: 'chrome'
+    thePresenceStudy:
+         modules:
+            config:
+                WebDriver:
+                    url: 'https://www.thepresencestudy.com/'
+                    browser: 'chrome'                   
+    oasissStudy:
+        modules:
+            config:
+                WebDriver:
+                    url: 'https://www.oasisstudy.com/#center'
+                    browser: 'chrome'
+    alopeciaStudy:
+         modules:
+            config:
+                WebDriver:
+                    url: 'https://www.alopeciastudy.com/'
+                    browser: 'chrome'
+    thebreastcancerStudy:
+         modules:
+            config:
+                WebDriver:
+                    url: 'https://www.thebreastcancerstudy.com/#center'
+                    browser: 'chrome'    
+    eczemaStudy:
+        modules:
+            config:
+                WebDriver:
+                    url: 'https://www.moderatetosevereeczema.com/'
+                    browser: 'chrome'
